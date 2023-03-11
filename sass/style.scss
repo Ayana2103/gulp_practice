@@ -1,6 +1,29 @@
-.main {
-  font-size: 20px;
-  &-content {
-  font-size: 14px;
+@mixin boxContent($value: 300px, $margin: 0 auto, $padding: 0) {
+  width: $value;
+  height: $value;
+  margin: $margin;
+  padding: $padding;
+}
+
+$bgColor: 1;
+
+@if $bgColor == 0{
+  .main-box {
+    @include boxContent;
+    background: #ff0000;
+  }
+}
+
+@else if $bgColor == 1{
+  .main-box {
+    @include boxContent(100px, 0 50px, 20px);
+    background: #0011ff;
+  }
+}
+
+@else {
+  .main-box{
+    @include boxContent(100px, 0 30px, 10px);
+    background: #001900;
   }
 }
