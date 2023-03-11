@@ -5,11 +5,11 @@ const sass = require('gulp-sass')(require('sass'));
 
 // style.scssの監視タスクを作成する
 gulp.task('default', function () {
-  // ★ style.scssファイルを監視
+  // .scssファイルを監視
   return gulp.watch('sass/**/*.scss', function () {
-  // style.scssの更新があった場合の処理
+  // sass内すべての.scssの更新があった場合の処理
 
-  // style.scssファイルを取得 （全てのSCSSファイルを取得）
+  // sass内.scssファイルを取得 （全てのSCSSファイルを取得）
   return gulp.src('sass/**/*.scss')
   // Sassのコンパイルを実⾏
   .pipe(sass({
